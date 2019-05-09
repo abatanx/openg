@@ -1,0 +1,28 @@
+#
+# PHP(CLI)
+#
+PHP="/usr/local/bin/php"
+
+#
+# UNIX COMMANDS
+#
+LS="/bin/ls"
+AWK="/usr/bin/awk"
+SED="/usr/bin/sed"
+FIND="/usr/bin/find"
+
+#
+# PostgreSQL
+#
+PGSQLDIR="/usr/local/pgsql"
+PGSQLBIN="${PGSQLDIR}/bin"
+
+PGSQL_PSQL="${PGSQLBIN}/psql"
+PGSQL_CREATEDB="${PGSQLBIN}/createdb"
+PGSQL_DROPDB="${PGSQLBIN}/dropdb"
+PGSQL_PGDUMP="${PGSQLBIN}/pg_dump"
+
+#
+# Image convert utility (convert), ImageMagick
+#
+CONVERT="/usr/local/bin/convert"
