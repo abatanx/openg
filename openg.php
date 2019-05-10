@@ -9,3 +9,5 @@ global $WGCONF_AUTOLOAD;
 
 $WGCONF_AUTOLOAD[] = __DIR__ . '/include';
 $WGCONF_AUTOLOAD[] = __DIR__ . '/imc';
+
+define( 'OGCONF_DIR_TPL', realpath( __DIR__ . '/tpl') );

@@ -1,0 +1,96 @@
+<html lang="ja">
+<head>
+	<meta http-equiv="content-language" content="ja">
+	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="keywords" content="sns">
+	<meta name="author" content="openg-project">
+	<meta name="description" content="openg">
+	<meta name="generator" content="waggo6">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="/wgcss/waggo6.css{val _nocache}">
+	<script type="text/javascript" charset="utf-8" src="/wgjs/waggo6.js{val _nocache}"></script>
+{rval in_head}
+<!--{def in_heads}-->
+<!-- EMBBED IN_HEADS -->
+<!--{each in_heads}-->
+{rval in_heads/data}
+
+<!--{/each}-->
+<!--{/def}-->
+<script type="text/javascript" charset="utf-8">
+$(window).load(function()
+{
+<!--{each in_onload_functions}-->
+	{rval in_onload_functions/data}
+
+<!--{/each}-->
+});
+
+$(window).unload(function()
+{
+<!--{each in_onunload_functions}-->
+	{rval in_onunload_functions/data}
+
+<!--{/each}-->
+});
+//-->
+	</script>
+
+{rval in_head}
+<!--{def in_heads}-->
+<!--{each in_heads}-->
+{rval in_heads/data}
+
+<!--{/each}-->
+<!--{/def}-->
+
+	<title>{val title}</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">ブランド</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="Navber">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">リンク</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						ドロップダウン
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">メニュー1</a>
+						<a class="dropdown-item" href="#">メニュー2</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">その他</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input type="search" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
+				<button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+			</form>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+{@pagecanvas}
+</body>
+</html>

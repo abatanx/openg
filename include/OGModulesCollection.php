@@ -8,7 +8,7 @@
 /**
  * モジュールコレクション
  */
-class OPENGModulesCollection
+class OGModulesCollection
 {
 	const
 		MT_PC = 0,
@@ -27,7 +27,7 @@ class OPENGModulesCollection
 		return ( $this->loaded[ $modname ] instanceof OPENGModule );
 	}
 
-	public function add( OPENGModule $instmodule )
+	public function add( OGModule $instmodule )
 	{
 		$modname                  = $instmodule->getName();
 		$this->loaded[ $modname ] = $instmodule;
@@ -48,7 +48,7 @@ class OPENGModulesCollection
 	{
 		if ( ! $this->isExists( $modname ) )
 		{
-			return new OPENGModuleDUMMYPLUG();
+			return new OGModuleDummyPlug();
 		}
 
 		return $this->loaded[ $modname ];
@@ -75,22 +75,15 @@ class OPENGModulesCollection
 	{
 		$modules = array();
 		$modurl  = "modules";
-		_Q( "select moduledir from modules where scan=true and enable=true order by ordernum;" );
+		_Q( "SELECT moduledir FROM modules WHERE scan=true AND enable=true ORDER BY ordernum;" );
 		while ( $f = _F() )
 		{
 			$modules[] = $f["moduledir"];
 		}
 		foreach ( $modules as $module )
 		{
-			switch ( $this->module_type )
-			{
-				case self::MT_PC:
-					$modclass = WGCONF_DIR_PUB . "/{$modurl}/{$module}/_module.php";
-					break;
-				case self::MT_MOBILE:
-					$modclass = WGCONF_DIR_PUB . "/{$modurl}/{$module}/_i_module.php";
-					break;
-			}
+			$modclass = WGCONF_DIR_PUB . "/{$modurl}/{$module}/_module.php";
+
 			if ( file_exists( $modclass ) )
 			{
 				$modinst      = require_once( $modclass );
